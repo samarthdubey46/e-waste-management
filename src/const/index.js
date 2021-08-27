@@ -2,7 +2,7 @@ import colors from "./colors";
 import layout_ from "./layout";
 
 export const color = colors
-export const themeColor = colors.lightgreen
+export const themeColor = colors.green
 export const layout = layout_
 export function ascii(a) {
     return a.charCodeAt(0);

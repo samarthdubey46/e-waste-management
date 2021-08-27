@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Ionicons, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
 import { createStackNavigator } from '@react-navigation/stack'
 import AddComplaint from '../Screens/AddComplaint'
@@ -9,15 +9,16 @@ import Bottom from './Bottom'
 import Login from '../Screens/Login'
 import Register from '../Screens/Register'
 import Forgot_Password from '../Screens/Forgot_Password'
+import { useSelector } from 'react-redux'
 
 let Navigator = createStackNavigator()
 
 const Stack = (props) => {
 
-	const [IsLogged, changeIsLogged] = useState(false)
+	const isLogged = useSelector(state => state.auth.ISLOGGED)
+	const skipLogin = useSelector(state => state.auth.LOGIN_SKIPPED)
 
-	if (IsLogged) {
-
+	if (skipLogin) {
 		return (
 			<Navigator.Navigator>
 
@@ -31,6 +32,27 @@ const Stack = (props) => {
 
 				<Navigator.Screen options={null} name="AddComplaint" component={AddComplaint} />
 
+				<Navigator.Screen options={{ headerShown: false }} name="Login" component={Login} />
+
+				<Navigator.Screen options={{ headerShown: false }} name="Register" component={Register} />
+
+			</Navigator.Navigator>
+		)
+	}
+
+	if (isLogged) {
+		return (
+			<Navigator.Navigator>
+
+				<Navigator.Screen options={{ headerShown: false }} name="Bottom" component={Bottom} />
+
+				<Navigator.Screen options={null} name="ProfileUpdate" component={ProfileUpdate} />
+
+				<Navigator.Screen options={null} name="Profile" component={Profile} />
+
+				<Navigator.Screen options={null} name="MyComplaints" component={MyComplaints} />
+
+				<Navigator.Screen options={null} name="AddComplaint" component={AddComplaint} />
 
 			</Navigator.Navigator>
 		)
@@ -39,9 +61,9 @@ const Stack = (props) => {
 	return (
 		<Navigator.Navigator>
 
-			<Navigator.Screen options={{headerShown:false}} name="Login" component={Login} />
+			<Navigator.Screen options={{ headerShown: false }} name="Login" component={Login} />
 
-			<Navigator.Screen options={null} name="Register" component={Register} />
+			<Navigator.Screen options={{ headerShown: false }} name="Register" component={Register} />
 
 			<Navigator.Screen options={null} name="Forgot_Password" component={Forgot_Password} />
 

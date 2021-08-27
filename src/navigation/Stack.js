@@ -10,18 +10,11 @@ import Login from '../Screens/Login'
 import Register from '../Screens/Register'
 import Forgot_Password from '../Screens/Forgot_Password'
 
-import { createDrawerNavigator } from '@react-navigation/drawer'
-
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
 let Navigator = createStackNavigator()
-
-
 
 const Stack = (props) => {
 
-	const [IsLogged, changeIsLogged] = useState(true)
-
+	const [IsLogged, changeIsLogged] = useState(false)
 
 	if (IsLogged) {
 
@@ -43,18 +36,14 @@ const Stack = (props) => {
 		)
 	}
 
-
 	return (
 		<Navigator.Navigator>
 
-			<Navigator.Screen options={null} name="Login" component={Login} />
+			<Navigator.Screen options={{headerShown:false}} name="Login" component={Login} />
 
 			<Navigator.Screen options={null} name="Register" component={Register} />
 
 			<Navigator.Screen options={null} name="Forgot_Password" component={Forgot_Password} />
-
-
-
 
 		</Navigator.Navigator>
 	)

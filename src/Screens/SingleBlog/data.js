@@ -1,0 +1,3 @@
+const data = "American whole magazine truth stop whose. On traditional measure example sense peace. Would mouth relate own chair.Together range line beyond. First policy daughter need kind miss.Now four management energy stay significant his. Artist political camera expert stop area.Individual man tell response purpose character would."
+const data2 = 'Along chance either six success on. At be than always different American address. Former claim chance prevent why measure too.Language ball floor meet usually board necessary. Natural sport music white.Onto knowledge other his offer face country. Almost wonder employee attorney. Theory type successful together. Raise study modern miss dog Democrat quickly.'
+export default data + '\n\n' + data2 + '\n\n' +data

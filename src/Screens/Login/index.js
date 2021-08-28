@@ -51,6 +51,7 @@ const Login = ({ navigation, route }) => {
                         <Caption>Sign in with your account</Caption>
                     </View>
                     <Image width={300} height={300} resizeMode="contain" style={styles.image} source={require('../../../assets/leaves1.png')} />
+
                 </View>
                 <View style={{ flex: .47, alignItems: 'flex-end', }}>
                     <RoundTextInput error={error[0]} viewStyle={{ marginBottom: 30 }} value={email} setValue={setEmail} placeHolder="Email" holder="Email Id" />
@@ -80,10 +81,10 @@ export default Login
 
 const styles = StyleSheet.create({
     questionview: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
-    title: { color: themeColor, fontWeight: '900', fontSize: 30 },
+    title: { color: themeColor, fontWeight: '900', fontSize: 30, },
     image: {
         width: layout.width / 1.7,
-        height: 300, top: 0, left: 0, transform: [{ rotate: '0deg' }]
+        height: 300, top: 0, left: 0, transform: [{ rotate: '0deg' }],
     },
     loginTextWithImage: {
         flex: .22,

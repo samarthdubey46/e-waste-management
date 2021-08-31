@@ -1,10 +1,13 @@
 export const auth = {
-    TOKEN: '',
+    TOKEN: null,
     USERNAME: '',
     EMAIL: '',
     USER_ID: 1,
     ISLOGGED: false,
-    LOGIN_SKIPPED : false
+    LOGIN_SKIPPED : false,
+    PROFILE_IMAGE : null,
+    LOADING : false,
+    SHOULD_RELOAD : false
 }
 export const theme = {
     text_color: 'black',

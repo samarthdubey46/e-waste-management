@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "How to make compost",
+      "category": "Natural",
+      "image": "https://static1.bigstockphoto.com/4/2/1/large1500/124777493.jpg",
+      "hasIntro": true,
+      "steps": [
+        {
+          "title": "What to Compost",
+          "type": "list",
+          "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F09%2F08%2Fcompost-bucket-6bcb050f.jpg",
+          "contentBefore" : "Composting is a great way to use the things in your refrigerator that are a little past their prime, therefore eliminating waste. Keeping a container in your kitchen like this white ceramic compost bucket ($20, World Market), is an easy way to accumulate your composting materials. Collect these materials to start off your compost pile right:",
+          "content": [
+            "Fruit scraps",
+            "Vegetable scraps",
+            "Coffee grounds",
+            "Eggshells",
+            "Grass and plant clippings",
+            "Dry leaves",
+            "Finely chopped wood and bark chips",
+            "Shredded newspaper"
+          ]
+        },
+        {
+          "title": "Combine Green and Brown Materials",
+          "type": "content",
+          "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F09%2F08%2Fadding-compost-pile-0d79ed17.jpg",
+          "content": "To make your own hot-compost heap, wait until you have enough materials to make a pile at least 3 feet deep. You are going to want to combine your wet, green items with your dry, brown items. \"Brown\" materials include dried plant materials; fallen leaves; shredded tree branches.For best results, start building your compost pile by mixing three parts brown with one part green materials.  If your compost pile looks too wet and smells, add more brown items or aerate more often. If you see it looks extremely brown and dry, add green items and water to make it slightly moist"
+        },
+        {
+          "title": "Water Your Pile",
+          "type": "content",
+          "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F09%2F08%2Fwatering-compost-pile-4e14ef35.jpg",
+          "content": "Sprinkle water over the pile regularly so it has the consistency of a damp sponge. Don't add too much water, otherwise, the microorganisms in your pile will become waterlogged and drown. If this happens, your pile will rot instead of compost. Monitor the temperature of your pile with a thermometer to be sure the materials are properly decomposing"
+        },
+        {
+          "title": "Stir Up Your Pile",
+          "type": "content",
+          "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2019%2F04%2F12163220%2Fcompost-pile-rake-86cd59eb.jpg",
+          "content": "During the growing season, you should provide the pile with oxygen by turning it once a week with a garden fork. The best time to turn the compost is when the center of the pile feels warm or when a thermometer reads between 130 and 150°F. Stirring up the pile will help it cook faster and prevents material from becoming matted down and developing an odor. At this point, the layers have served their purpose of creating equal amounts of green and brown materials throughout the pile, so stir thoroughly."
+        },
+        {
+          "title": "Feed Your Garden",
+          "type": "content",
+          "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2019%2F06%2F05171534%2Fwoman-holding-dirt-101490925.jpg",
+          "content": "When the compost no longer gives off heat and becomes dry, brown, and crumbly, it's fully cooked and ready to feed to the garden. Add about 4 to 6 inches of compost to your flower beds and into your pots at the beginning of each planting season.\n\nSome gardeners make what's known as compost tea with finished compost. This involves allowing fully formed compost to \"steep\" in water for several days, then straining it to use as a homemade liquid fertilizer."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Recycle your phone",
+      "type": "content",
+      "category": "E-waste",
+      "hasIntro": true,
+      "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2012/05/recycle-smartphone.jpg?q=50&fit=contain&w=400&h=400&dpr=1.5",
+      "steps": [
+        {
+          "title": "Recycle the Phone Into a Wallet or Piggy Bank",
+          "type": "content",
+          "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2016/10/repurpose-old-phone-wallet.jpg?q=50&fit=crop&w=400&dpr=1.5",
+          "content": "Most of these tricks are useful if you have a functional old phone. But what if it's a busted old clamshell phone or a broken iPhone? Well, you could turn it into the coolest wallet around.\n\nThis project requires you to take apart the phone and remove all the gadgetry inside. You just want the outer case, nothing else. As such, it is a great way to reuse old Nokia phones (and other keypad-based models)."
+        },
+        {
+          "title": "Turn it Into a Security Camera",
+          "type": "content",
+          "image": "https://mashtips.com/wp-content/uploads/2016/03/Android-Secuirty-Camera-App.jpg",
+          "content": "For an Android-only setup, nothing is as easy as WardenCam. Download the app, place your phone where you want it, and you can watch all the action on another phone or computer.\n\nIn case you're looking to reuse non-smartphones with Wi-Fi, then you'll need to set it up manually. As long as it connects to your home Wi-Fi, we have the complete guide to set up old phones as a home security network."
+        },
+        {
+          "title": "Leave it In Your Car Permanently",
+          "type": "content",
+          "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2016/10/repurpose-old-phone-car.jpg?q=50&fit=crop&w=750&dpr=1.5",
+          "content": "A lot of people overlook the simplest use for an old smartphone. Grab a car phone holder, a double-port car charger, and fix your phone in place permanently.\n\nIt means you don't need to waste your regular phone's battery or data on GPS and turn-by-turn directions. That's what the car phone is for.\n\nSimilarly, you don't even need to spend a ridiculous amount of money for an awesome car stereo with Bluetooth and internet radio. Just buy one of the best Bluetooth speakers and play music from your car phone."
+        },
+        {
+          "title": "Donate Your Old Phone to Charity",
+          "type": "list",
+          "image": "https://flipsy.com/article/wp-content/uploads/2017/01/donate-phone-charity.jpg",
+          "contentBefore": "There are dozens of charities in both the US and Europe that will take your old phone off you, give it a spruce up, and then pass it on to people who can't access the latest tech quite so readily.\n\nSome charities worth checking out include",
+          "content": [
+            "Cell Phones for Soldiers.",
+            "911 Cell Phone Bank.",
+            "Medic Mobile: Gives phones to medical workers."
+          ]
+        }
+      ]
+    }
+  ]
+}

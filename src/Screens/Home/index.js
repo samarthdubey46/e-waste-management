@@ -1,56 +1,62 @@
-import React from 'react'
-import { View, Button, Text, StyleSheet, FlatList, ImageBackground, TouchableOpacity } from 'react-native'
-import { Caption, Title } from '../../components/Typography'
-import { color, layout } from '../../const/index'
-import data from './data'
+import React, {useEffect, useState} from 'react'
+import {FlatList, RefreshControl, ScrollView, StyleSheet, View} from 'react-native'
+import {Caption} from '../../components/Typography'
+import {color} from '../../const/index'
+import BlogListComponent from "../../components/BlogList";
+import {useSelector} from "react-redux";
+import {BLogs} from "../../API/blogs";
+import LoadingScreen from "../Loading";
 
-const Home = ({ navigation, route }) => {
-    const navigateToSingleBlog = (item) => {
-        navigation.navigate('SingleBlog', { blog: item, title: '' })
+const Home = ({navigation, route}) => {
+    const token = useSelector(state => state.auth.TOKEN)
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [refreshing, setRefreshing] = useState(false);
+    const getData = async () => {
+        let res = await BLogs(token)
+        if (res.status !== 'OK')
+            res = await BLogs(token)
+        if (res.status === 'OK') {
+            setData(res.data)
+        }
+    }
+    useEffect(() => {
+        (async () => {
+            setLoading(true)
+            await getData()
+            setLoading(false)
+
+        })()
+    }, []);
+    if (loading) {
+        return <LoadingScreen/>
     }
     return (
-        <View style={{ flex: 1 }}>
-            <View style={{ flex: 1, backgroundColor: color.white, paddingVertical: 20, paddingHorizontal: 15 }}>
-                <View style={{ marginBottom: 25, }}>
+        <ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => {
+            setRefreshing(true)
+            await getData()
+            setRefreshing(false)
+        }}/>} style={{flex: 1, backgroundColor: color.white}}>
+            {/*<Button title={'as'} o1nPress={async () => console.log(await state)}/>*/}
+            <View style={{flex: 1, backgroundColor: color.white, paddingVertical: 20, paddingHorizontal: 15}}>
+                <View style={{marginBottom: 25,}}>
                     <Caption style={styles.greeting}>Good morning</Caption>
                 </View>
-                <View style={{ flex: 1 }}>
+                <View style={{flex: 1}}>
                     {/* <Title style={{ fontSize: 14 }}>Blogs</Title> */}
                     <FlatList
                         data={data}
                         keyExtractor={(item) => String(item.id)}
-                        renderItem={({ item, index }) => (
-                            <View style={{
-                                flexDirection: 'row', marginVertical: 10,
-                                minHeight: 120,
-                            }}>
-                                <View style={{ flex: .35, flexDirection: 'row', marginRight: 10 }}>
-                                    <TouchableOpacity style={{ flex: 1, height: 110 }} onPress={() => navigateToSingleBlog(item)}>
-                                        <ImageBackground resizeMode="stretch" style={{ flex: 1, height: 110 }} source={{ uri: item.image }} />
-                                    </TouchableOpacity>
-                                </View>
-                                <View style={{ flex: .64, }}>
-                                    <TouchableOpacity onPress={() => navigateToSingleBlog(item)} style={{ flex: .6, }}>
-                                        <Text numberOfLines={3} style={{ fontSize: 16, fontWeight: '900' }}>{item.title}</Text>
-                                    </TouchableOpacity>
-                                    <View style={{ flex: .3, justifyContent: 'center', }}>
-                                        {/* <Text style={{ fontSize: 14, fontWeight: '900' }}>
-                                        {item.writtenBy}</Text> */}
-                                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <Caption style={{ fontSize: 12 }}>{item.writtenOn}</Caption>
-                                            <Caption style={{ fontSize: 12 }}>◉ {item.readTime} mins read</Caption>
-                                        </View>
-                                    </View>
-                                </View>
-                            </View>
-                        )}
+                        renderItem={({item, index}) => <BlogListComponent index={index} list={data.map(item => item.id)}
+                                                                          item={item} navigation={navigation}/>}
                     />
                 </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 const styles = StyleSheet.create({
-    greeting: { fontSize: 16, marginBottom: 10 }
+    greeting: {fontSize: 16, marginBottom: 10}
 })
 export default Home

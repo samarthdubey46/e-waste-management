@@ -1,19 +1,22 @@
 import {color} from "../../const";
+
 export default {
     textViewContainer: {
-        height: 40, 
+        height: 55,
         fontSize: 16,
         fontFamily: 'normal',
-       // marginVertical: 15,
-        borderBottomColor: '#DCE2EE',
-        borderBottomWidth: 2, 
-        paddingVertical: 10
+        marginVertical: 2,
+        borderColor: '#DCE2EE',
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 10,
     },
-    text:{
+    text: {
         fontFamily: 'normal',
-        fontSize:16,
-        color:color.gray
-       // marginTop: 10,
+        fontSize: 16,
+        color: color.gray,
+        marginHorizontal: 5
+        // marginTop: 10,
     }
 
 }

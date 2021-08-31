@@ -3,7 +3,6 @@ const data = [
         id: 1,
         image: 'https://sc04.alicdn.com/kf/HTB1dGHDNXXXXXX8XFXXq6xXFXXXL.jpg',
         title: 'How to recycle old waste with the help of homemade machines',
-        writtenBy: 'Kevin Peter',
         writtenOn: 'Apr 25 2021',
         readTime: 5,
         category: 'Awareness'

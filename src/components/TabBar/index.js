@@ -15,7 +15,7 @@ export const TabBar = ({
   descriptors,
   navigation,
 }) => {
-  const [translateValue] = useState(new Animated.Value(0));
+  const [translateValue] = useState(new Animated.Value(1));
   const totalWidth = Dimensions.get("window").width;
   const tabWidth = totalWidth / state.routes.length;
 

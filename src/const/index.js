@@ -4,6 +4,7 @@ import layout_ from "./layout";
 export const color = colors
 export const themeColor = colors.green
 export const layout = layout_
+export const APIURL = 'http://192.168.1.206:8000/api/'
 export function ascii(a) {
     return a.charCodeAt(0);
 }
